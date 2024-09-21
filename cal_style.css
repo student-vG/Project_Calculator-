@@ -1,0 +1,304 @@
+@import url("https://fonts.googleapis.com/css?family=Maven+Pro:400,500,600,700,800,900&display=swap");
+*{
+    margin: 0; 
+    padding:0;
+    box-sizing: border-box;
+    font-family: Maven,'Montserrat';
+
+}
+
+:root{
+  --wt:whitesmoke;
+ --lg1: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+ --lg2: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+ --lg3: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+ --lg4: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);
+ --lg5: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+ --lg6: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #ffffff;
+}
+
+.calculator {
+  width: 400px;
+  max-width: 400px;
+  height: 90vh;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.305);
+  background-color: whitesmoke;
+
+}
+
+#result {
+  width: 100%;
+  max-width: 100%;
+  height: 20vh;
+  border: none;
+  text-align: right;
+  padding: 25px;
+  font-size: 44px;
+  box-sizing: border-box;
+  margin-bottom: 25px;
+  background-color: rgba(231, 230, 230, 0.575);
+
+}
+
+.buttons {
+  margin: 25px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  /* background-color: white; */
+}
+
+button {
+  padding: 20px;
+  border: none;
+  border-radius: 50%;
+  box-shadow:inset 0 0 20px rgba(128, 128, 128, 0.232),0 0 20px rgba(128, 128, 128, 0.232);
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #aeaeae18;
+}
+
+.zero {
+  grid-column: span 2;
+}
+
+button:nth-child(19) {
+  background-color: rgb(253, 220, 197);
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+}
+
+button:nth-child(19):hover {
+  background-color: rgb(247, 174, 123);
+}
+
+button:nth-child(1) {
+  background-color: rgb(254, 230, 213);
+}
+button:nth-child(1):hover{
+  background-color: rgb(247, 174, 123);
+}
+button:nth-child(2) {
+
+  background-color: rgba(175, 173, 172, 0.201);
+
+}
+button:nth-child(2):hover{
+  background-color: rgba(175, 173, 172, 0.466);
+
+}
+button:nth-child(3) {
+  background-color: rgba(175, 173, 172, 0.201);
+
+}
+button:nth-child(3):hover{
+  background-color: rgba(175, 173, 172, 0.466);
+
+}
+button:nth-child(4) {
+  background-color: rgba(175, 173, 172, 0.201);
+
+}
+button:nth-child(4):hover{
+  background-color: rgba(175, 173, 172, 0.466);
+
+}
+
+button:nth-child(8) {
+  background-color: rgba(175, 173, 172, 0.201);
+
+}
+button:nth-child(8):hover{
+  background-color: rgba(175, 173, 172, 0.466);
+
+}
+button:nth-child(12) {
+  background-color: rgba(175, 173, 172, 0.201);
+
+}
+button:nth-child(12):hover{
+  background-color: rgba(175, 173, 172, 0.466);
+
+}
+button:nth-child(16) {
+  background-color: rgba(175, 173, 172, 0.201);
+
+}
+button:nth-child(16):hover{
+  background-color: rgba(175, 173, 172, 0.466);
+
+}
+.fa-delete-left {
+  font-size: 1.1rem;
+}
+
+@media only screen and (max-width: 600px){
+
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    margin: 0;
+    /* margin: 20px; */
+    color: white;
+    background-color: #ffffff;
+  }
+
+  .calculator {
+    margin: 0px;
+    width: 400px;
+    max-width: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.305);
+    background-color: rgb(0, 0, 0);
+  
+  }
+
+  .fa-delete-left {
+    font-size: 1.1rem;
+    color: whitesmoke;
+  }
+  
+  #result {
+    width: 100%;
+    max-width: 100%;
+    height: 20vh;
+    border: none;
+    text-align: right;
+    padding: 25px;
+    font-size: 44px;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    color: whitesmoke;
+    text-shadow: 0 2px 6px rgba(211, 211, 211, 0.293);
+    background-color: rgba(35, 35, 35, 0.575);
+  
+  }
+  
+  .buttons {
+    margin: 25px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    /* background-color: white; */
+  }
+  
+  button {
+    padding: 20px;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(128, 128, 128, 0.232);
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    color: whitesmoke;
+    background-color: #a3a3a364;
+    border-top: 1px solid #dddddd69;
+    border-right: 1px solid #dddddd69;
+    transition: background-color 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #aeaeae18;
+  }
+  
+  .zero {
+    grid-column: span 2;
+  }
+  
+  button:nth-child(19) {
+    background-color: rgb(252, 164, 101);
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+
+  }
+  
+  button:nth-child(19):hover {
+    background-color: rgb(247, 174, 123);
+
+  }
+  
+  button:nth-child(1) {
+    background-color: rgb(252, 164, 101);
+  }
+  button:nth-child(1):hover{
+    background-color: rgb(252, 164, 101);
+  }
+  button:nth-child(2) {
+  
+    background-color: rgba(175, 173, 172, 0.208);
+  
+  }
+  button:nth-child(2):hover{
+    background-color: rgba(175, 173, 172, 0.466);
+  
+  }
+  button:nth-child(3) {
+    background-color: rgba(175, 173, 172, 0.201);
+  
+  }
+  button:nth-child(3):hover{
+    background-color: rgba(175, 173, 172, 0.466);
+  
+  }
+  button:nth-child(4) {
+    background-color: rgba(175, 173, 172, 0.201);
+  
+  }
+  button:nth-child(4):hover{
+    background-color: rgba(175, 173, 172, 0.466);
+  
+  }
+  
+  button:nth-child(8) {
+    background-color: rgba(175, 173, 172, 0.201);
+  
+  }
+  button:nth-child(8):hover{
+    background-color: rgba(175, 173, 172, 0.466);
+  
+  }
+  button:nth-child(12) {
+    background-color: rgba(175, 173, 172, 0.201);
+  
+  }
+  button:nth-child(12):hover{
+    background-color: rgba(175, 173, 172, 0.466);
+  
+  }
+  button:nth-child(16) {
+    background-color: rgba(175, 173, 172, 0.201);
+  
+  }
+  button:nth-child(16):hover{
+    background-color: rgba(175, 173, 172, 0.466);
+  
+  }
+
+}
+
+
+
